@@ -1,4 +1,4 @@
-# idawasm2
+# idawasm
 
 These IDA Pro plugins add support for loading and disassembling WebAssembly modules.
 

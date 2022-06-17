@@ -4,7 +4,7 @@ These IDA Pro plugins add support for loading and disassembling WebAssembly modu
 
 This version has been forked from [fireeye/idawasm](https://github.com/fireeye/idawasm) to enhance some features.
 
-- IDA 7.6 support
+- IDA 7.4+ support
 - add Python 3 type annotations (partially for now)
 - support `if`, `else`, `br_table` operations
 
@@ -65,7 +65,7 @@ Whenever you update this project, you'll need to update the python module, but s
 
 ## supported IDA version
 
-IDA 7.6 and Python 3.9 or later
+IDA 7.4+ and Python 3.8+
 
 ## todo
 

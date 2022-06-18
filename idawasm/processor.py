@@ -12,7 +12,7 @@ import ida_name
 import ida_segment
 import ida_ua
 import ida_xref
-import netnode
+import ida_netnode
 import wasm
 import wasm.wasmtypes
 from wasm.decode import Instruction, ModuleFragment
@@ -671,7 +671,7 @@ class wasm_processor_t(ida_idp.processor_t):
         logger.info('new file: %s', filename)
         self.load()
 
-        wasm_nn = netnode.Netnode('$ wasm.offsets')
+        wasm_nn = ida_netnode.Netnode('$ wasm.offsets')
         wasm_nn['functions'] = {f['index']: f['offset'] for f in self.functions.values() if 'offset' in f}
         wasm_nn['globals'] = {g['index']: g['offset'] for g in self.globals.values() if 'offset' in g}
 

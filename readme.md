@@ -43,21 +43,22 @@ Features:
 
 There are three steps to install this loader and processor:
 
-1. install the python module:
+1. install the python module (i.e. `idawasm`):
   
 ```
     python.exe setup.py install
 ```
 
-2. manually install the WebAssembly file loader:
+2. install the IDA loader and processor plugins (i.e. `wasm_loader.py` and `wasm_proc.py`):
+    
+```
+    idawasm.exe
+```
+
+or, manually copy/move the Python script files to `%IDADIR%`:
     
 ```
     mv loaders\wasm_loader.py %IDADIR%\loaders\wasm_loader.py
-```
-
-3. manually install the WebAssembly processor:
-    
-```
     mv procs\wasm_proc.py %IDADIR%\procs\wasm_proc.py
 ```
 

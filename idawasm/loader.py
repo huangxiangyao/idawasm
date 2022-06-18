@@ -32,12 +32,13 @@ def accept_file(f: ida_idaapi.loader_input_t, n: Any) -> Union[str, int]:
     f.seek(0)
     if f.read(4) != b'\x00asm':
         return 0
-
-    if struct.unpack('<I', f.read(4))[0] != 0x1:
+    
+    version_number = struct.unpack('<I', f.read(4))[0]
+    #if struct.unpack('<I', f.read(4))[0] != 0x1:
         # only support v1 right now
-        return 0
+    #    return 0
 
-    return 'WebAssembly v%d executable' % 0x1
+    return 'WebAssembly Binary v%d' % (version_number)
 
 
 def MakeN(addr: int, size: int) -> None:
